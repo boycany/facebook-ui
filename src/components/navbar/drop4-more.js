@@ -1,6 +1,6 @@
-const More = () => {
+const More = ({ handlePanel }) => {
   return (
-    <div className="popover-panel hidden" id="more-panel">
+    <div className="popover-panel hidden" id="more-panel" onClick={handlePanel}>
       <p className="text-white mb-3 text-2xl">Red Chien</p>
 
       <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-input cursor-pointer">

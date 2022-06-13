@@ -1,6 +1,6 @@
-const DropDownPlus = () => {
+const DropDownPlus = ({ handlePanel }) => {
   return (
-    <div className="popover-panel" id="plus-panel">
+    <div className="popover-panel hidden" id="plus-panel" onClick={handlePanel}>
       <p className="text-white mb-3 text-2xl">建立</p>
       <div className="flex items-center p-1 mb-2 hover:bg-fb-active rounded-lg cursor-pointer">
         <div className="bg-fb-input rounded-full p-2 mr-2 flex justify-center items-center">

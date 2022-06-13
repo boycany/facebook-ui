@@ -1,6 +1,10 @@
-const DropDownNotification = () => {
+const DropDownNotification = ({ handlePanel }) => {
   return (
-    <div className="popover-panel hidden" id="notification-panel">
+    <div
+      className="popover-panel hidden"
+      id="notification-panel"
+      onClick={handlePanel}
+    >
       <p className="text-white mb-3 text-2xl">Messenger</p>
       <div className="bg-fb-input rounded-full py-1 px-3 flex items-center mb-4">
         {/* 這個實作 input 的技巧是用一個 div 來將 input 和 svg 包起來，然後將 input 的樣式都寫在 div 裡 */}
