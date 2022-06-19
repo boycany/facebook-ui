@@ -1,9 +1,9 @@
 import "./App.css";
 import HeaderRight from "./components/navbar/header-right";
 import HeaderLeft from "./components/navbar/header-left";
-import Information from "./components/information";
+import Information from "./components/left-block/information";
 import Timeline from "./components/timeline";
-import Contact from "./components/contact";
+import Contact from "./components/right-block/contact";
 
 function App() {
   return (

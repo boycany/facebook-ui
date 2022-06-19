@@ -3,13 +3,6 @@ import DropDownMessenger from "./drop2-messenger";
 import DropDownNotification from "./drop3-notification";
 import More from "./drop4-more";
 import { Component } from "react";
-
-// const plusPanel = document.getElementById("plus-panel");
-// const msgPanel = document.getElementById("msg-panel");
-// const notificationPanel = document.getElementById("notification-panel");
-// const morePanel = document.getElementById("more-panel");
-// const panels = [plusPanel, msgPanel, notificationPanel, morePanel];
-
 class HeaderRight extends Component {
   constructor() {
     super();
@@ -46,10 +39,10 @@ class HeaderRight extends Component {
   closePanel = (e) => {
     console.log("window click");
     // 選 -1 就等於是不會選到 panels 陣列裡有的東西，就等於是關閉panel
-    this.choosePanel(-1);
+    this.openPanel(-1);
   };
 
-  choosePanel = (index) => {
+  openPanel = (index) => {
     // console.log("plusPanel :>> ", plusPanel);
     // console.log("panels :>> ", panels);
     this.state.panels.forEach((p, idx) => {
@@ -65,7 +58,7 @@ class HeaderRight extends Component {
     });
   };
 
-  openPanel = (e) => {
+  choosePanel = (e) => {
     e.stopPropagation(); //停止冒泡事件
 
     let btnId;
@@ -74,20 +67,20 @@ class HeaderRight extends Component {
     } else {
       btnId = e.target.id;
     }
-    document.getElementById("plus-panel");
+    // document.getElementById("plus-panel");
     btnId = btnId.split("-")[0];
     switch (btnId) {
       case "plus":
-        this.choosePanel(0);
+        this.openPanel(0);
         break;
       case "msg":
-        this.choosePanel(1);
+        this.openPanel(1);
         break;
       case "notification":
-        this.choosePanel(2);
+        this.openPanel(2);
         break;
       case "more":
-        this.choosePanel(3);
+        this.openPanel(3);
         break;
       default:
         break;
@@ -107,33 +100,29 @@ class HeaderRight extends Component {
       <div className="flex items-center relative">
         {/* div 設定成 relative，才可以讓其中設定成 absolute 的下拉選單有個定位點，想成是黏在這個 div 中 */}
         <button
-          className="popover-btn lg:hidden"
+          className="popover-btn"
           id="plus-btn"
-          onClick={this.openPanel}
+          onClick={this.choosePanel}
         >
           <img src="https://bruce-fe-fb.web.app/image/plus.svg" alt="plus" />
         </button>
-        <button
-          className="popover-btn lg:hidden"
-          id="msg-btn"
-          onClick={this.openPanel}
-        >
+        <button className="popover-btn" id="msg-btn" onClick={this.choosePanel}>
           <img
             src="https://bruce-fe-fb.web.app/image/messenger.svg"
             alt="messenger"
           />
         </button>
         <button
-          className="popover-btn lg:hidden"
+          className="popover-btn"
           id="notification-btn"
-          onClick={this.openPanel}
+          onClick={this.choosePanel}
         >
           <img src="https://bruce-fe-fb.web.app/image/bell.svg" alt="bell" />
         </button>
         <button
-          className="popover-btn lg:hidden"
+          className="popover-btn"
           id="more-btn"
-          onClick={this.openPanel}
+          onClick={this.choosePanel}
         >
           <img src="https://bruce-fe-fb.web.app/image/down.svg" alt="down" />
         </button>
