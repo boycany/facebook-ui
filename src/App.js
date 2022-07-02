@@ -2,7 +2,7 @@ import "./App.css";
 import HeaderRight from "./components/navbar/header-right";
 import HeaderLeft from "./components/navbar/header-left";
 import Information from "./components/left-block/information";
-import Timeline from "./components/timeline";
+import Timeline from "./components/mid-block/timeline";
 import Contact from "./components/right-block/contact";
 
 function App() {

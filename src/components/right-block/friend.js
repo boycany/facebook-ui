@@ -10,7 +10,8 @@ const Friend = ({ name }) => {
           px-1 
           rounded 
           hover:bg-fb-input 
-          cursor-pointer"
+          cursor-pointer
+          "
     >
       <div className="w-[45px]">
         <div className="relative w-[32px] cursor-pointer">
