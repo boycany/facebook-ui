@@ -47,13 +47,21 @@ const users = [
   {
     id: 6,
     name: "Lebron James",
-    stories: [],
+    stories: [
+      {
+        content: "eat hamburgers",
+      },
+    ],
     posts: [],
   },
   {
     id: 7,
     name: "Steven Curry",
-    stories: [],
+    stories: [
+      {
+        content: "need something relax",
+      },
+    ],
     posts: [],
   },
   {
