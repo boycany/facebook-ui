@@ -1,6 +1,6 @@
 const NewPost = () => {
   return (
-    <div className="rounded-lg mt-4 px-4 py-3 bg-fb-card">
+    <div className="card">
       <div className="flex pb-4">
         {/* 圓形小頭貼 */}
         <div className="w-[40px] rounded-full overflow-hidden mr-3">

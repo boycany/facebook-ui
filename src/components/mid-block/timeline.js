@@ -1,5 +1,6 @@
 import NewPost from "./newPost";
 import Stories from "./stories/stories";
+import Room from "./room";
 
 const Timeline = () => {
   return (
@@ -7,6 +8,7 @@ const Timeline = () => {
       {/* 限時動態 */}
       <Stories />
       <NewPost />
+      <Room />
     </div>
   );
 };

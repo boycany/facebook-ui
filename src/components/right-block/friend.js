@@ -1,3 +1,5 @@
+import Avator from "../avator";
+
 const Friend = ({ name }) => {
   return (
     <div
@@ -14,27 +16,7 @@ const Friend = ({ name }) => {
           "
     >
       <div className="w-[45px]">
-        <div className="relative w-[32px] cursor-pointer">
-          <div className="overflow-hidden rounded-full">
-            <img
-              src="https://bruce-fe-fb.web.app/image/avator.png"
-              alt="friend"
-            />
-          </div>
-          <div
-            className="
-                w-[8px]
-                h-[8px]
-                rounded-full
-                bg-green-500
-                absolute
-                bottom-0
-                right-0
-                ring-gray-900
-                ring
-              "
-          ></div>
-        </div>
+        <Avator divSize={32} greenPointSize={8} />
       </div>
       <p className="text-white text-[0.9rem]">{name}</p>
     </div>
