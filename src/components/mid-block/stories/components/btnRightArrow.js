@@ -6,7 +6,7 @@ const BtnRightArrow = () => {
             popover-btn
             -right-3
             top-[calc(50%-22.5px)]
-            z-10
+            z-30
             w-[45px]
             h-[45px]
             bg-neutral-500

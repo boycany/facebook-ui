@@ -10,8 +10,6 @@ const Information = () => {
       {infoArr.map((item, idx) => {
         return <InfoItem key={idx} name={item.name} imageUrl={item.imageUrl} />;
       })}
-
-      {/* <p className="w-full bg-blue-300">左側資訊欄</p> */}
     </div>
   );
 };
