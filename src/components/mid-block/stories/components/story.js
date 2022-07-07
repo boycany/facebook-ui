@@ -1,19 +1,16 @@
-const Story = ({ username, handleMouseOver, handleMouseOut }) => {
+import BlackFilter20 from "./blackFilter20";
+import BlackFilter30 from "./blackFilter30";
+
+const Story = ({ username, handleMouseOver, handleMouseOut, isHidden }) => {
   return (
-    <div className="flex-1 px-[4px] min-w-[120px] cursor-pointer">
+    <div
+      className="flex-1 px-[4px] min-w-[120px] cursor-pointer"
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
       <div className="relative overflow-hidden">
         {/* 做動畫效果的第二層濾鏡 */}
-        <div
-          className="
-          filter-black20
-          hidden
-          absolute 
-          w-full 
-          h-full 
-          top-0 
-          left-0
-          bg-black/20 z-20"
-        ></div>
+        <BlackFilter20 isHidden={isHidden} />
         {/* 圓形大頭照 */}
         <div
           className="
@@ -36,20 +33,7 @@ const Story = ({ username, handleMouseOver, handleMouseOut }) => {
           />
         </div>
         {/* 灰黑色濾鏡遮罩，漸層的語法是：from....via....to....(下面的例子就是:從黑色到透明色)(省略via)*/}
-        <div
-          className="
-          absolute 
-          w-full 
-          h-full 
-          top-0 
-          left-0 
-          bg-gradient-to-b
-          from-black/30 
-          to-transparent 
-          z-20"
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        ></div>
+        <BlackFilter30 />
         <img
           src="https://picsum.photos/325/577?random=10"
           className="w-full h-full duration-500 story-pic"

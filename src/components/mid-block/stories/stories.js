@@ -2,28 +2,40 @@ import Story from "./components/story";
 import NewStory from "./components/newStory";
 import BtnRightArrow from "./components/btnRightArrow";
 import users from "../../../data/users";
+import { useState } from "react";
 
 const Stories = () => {
-  const handleMouseOver = (e) => {
-    const parent = e.target.parentElement;
-    // console.log("e.target.parentElement :>> ", e.target.parentElement);
-    // console.log("e.target :>> ", e.target);
+  //#region
+  // const handleMouseOver = (e) => {
+  //   const parent = e.target.parentElement;
+  //   // console.log("e.target.parentElement :>> ", e.target.parentElement);
+  //   // console.log("e.target :>> ", e.target);
 
-    const div = parent.querySelector(".filter-black20");
-    div.classList.remove("hidden");
+  //   const div = parent.querySelector(".filter-black20");
+  //   div.classList.remove("hidden");
 
-    const img = parent.querySelector(".story-pic");
-    img.classList.add("scale-105");
+  //   const img = parent.querySelector(".story-pic");
+  //   img.classList.add("scale-105");
+  // };
+
+  // const handleMouseOut = (e) => {
+  //   const parent = e.target.parentElement;
+
+  //   const div = parent.querySelector(".filter-black20");
+  //   div.classList.add("hidden");
+
+  //   const img = parent.querySelector(".story-pic");
+  //   img.classList.remove("scale-105");
+  // };
+  //#endregion
+  const [isHidden, setHidden] = useState(true);
+
+  const handleMouseOver = () => {
+    setHidden(false);
   };
 
-  const handleMouseOut = (e) => {
-    const parent = e.target.parentElement;
-
-    const div = parent.querySelector(".filter-black20");
-    div.classList.add("hidden");
-
-    const img = parent.querySelector(".story-pic");
-    img.classList.remove("scale-105");
+  const handleMouseOut = () => {
+    setHidden(true);
   };
 
   return (
@@ -33,6 +45,7 @@ const Stories = () => {
         <NewStory
           handleMouseOver={handleMouseOver}
           handleMouseOut={handleMouseOut}
+          isHidden={isHidden}
         />
         {/* 限時動態 */}
         {users
@@ -43,6 +56,7 @@ const Stories = () => {
               key={user.id}
               handleMouseOver={handleMouseOver}
               handleMouseOut={handleMouseOut}
+              isHidden={isHidden}
             />
           ))}
       </div>
