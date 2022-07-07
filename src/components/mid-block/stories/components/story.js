@@ -1,7 +1,21 @@
 import BlackFilter20 from "./blackFilter20";
 import BlackFilter30 from "./blackFilter30";
+import { useState } from "react";
 
-const Story = ({ username, handleMouseOver, handleMouseOut, isHidden }) => {
+const Story = ({ username }) => {
+  const [isHidden, setHidden] = useState(true);
+  const [isScale, setScale] = useState(false);
+
+  const handleMouseOver = () => {
+    // console.log("e.target :>> ", e.target);
+    setHidden(false);
+    setScale(true);
+  };
+
+  const handleMouseOut = () => {
+    setHidden(true);
+    setScale(false);
+  };
   return (
     <div
       className="flex-1 px-[4px] min-w-[120px] cursor-pointer"
@@ -36,7 +50,7 @@ const Story = ({ username, handleMouseOver, handleMouseOut, isHidden }) => {
         <BlackFilter30 />
         <img
           src="https://picsum.photos/325/577?random=10"
-          className="w-full h-full duration-500 story-pic"
+          className={`w-full h-full duration-500 ${isScale ? "scale-105" : ""}`}
           alt="story"
         />
         {/* 使用者名稱 */}

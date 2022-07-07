@@ -13,6 +13,7 @@ module.exports = {
         "fb-active": "#323436",
         "fb-card": "#242526",
         fb: "#2e89ff",
+        "fb-point": "#32CD32",
       },
     },
   },

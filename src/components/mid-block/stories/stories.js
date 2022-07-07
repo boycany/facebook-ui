@@ -2,7 +2,6 @@ import Story from "./components/story";
 import NewStory from "./components/newStory";
 import BtnRightArrow from "./components/btnRightArrow";
 import users from "../../../data/users";
-import { useState } from "react";
 
 const Stories = () => {
   //#region
@@ -28,36 +27,17 @@ const Stories = () => {
   //   img.classList.remove("scale-105");
   // };
   //#endregion
-  const [isHidden, setHidden] = useState(true);
-
-  const handleMouseOver = () => {
-    setHidden(false);
-  };
-
-  const handleMouseOut = () => {
-    setHidden(true);
-  };
 
   return (
     <div className="relative">
       <div className="flex overflow-x-auto invisible-scrollbar" id="story-list">
         {/* “新增限時動態” */}
-        <NewStory
-          handleMouseOver={handleMouseOver}
-          handleMouseOut={handleMouseOut}
-          isHidden={isHidden}
-        />
+        <NewStory />
         {/* 限時動態 */}
         {users
           .filter((user) => user.stories.length > 0)
           .map((user) => (
-            <Story
-              username={user.name}
-              key={user.id}
-              handleMouseOver={handleMouseOver}
-              handleMouseOut={handleMouseOut}
-              isHidden={isHidden}
-            />
+            <Story username={user.name} key={user.id} />
           ))}
       </div>
       {/* 限時動態滑動按鈕 */}

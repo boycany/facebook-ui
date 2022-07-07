@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div
       id="right-block"
-      className="hidden top-main-span max-w-[360px] w-full h-full lg:block"
+      className="hidden top-main-span max-w-[360px] w-full h-full lg:block ml-8"
     >
       <p className="mb-2 text-lg text-gray-400">聯絡人</p>
       {users.map((friend) => {

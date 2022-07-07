@@ -3,8 +3,9 @@ const Avator = ({ divSize, greenPointSize }) => {
 
   const greenPoint = `w-[${greenPointSize}px]
                 h-[${greenPointSize}px]
+                p-1
                 rounded-full
-                bg-green-500
+                bg-fb-point
                 absolute
                 bottom-0
                 right-0

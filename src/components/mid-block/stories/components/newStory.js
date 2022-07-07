@@ -1,7 +1,21 @@
 import BlackFilter20 from "./blackFilter20";
 import BlackFilter30 from "./blackFilter30";
+import { useState } from "react";
 
-const NewStory = ({ handleMouseOver, handleMouseOut, isHidden }) => {
+const NewStory = () => {
+  const [isHidden, setHidden] = useState(true);
+  const [isScale, setScale] = useState(false);
+
+  const handleMouseOver = (e) => {
+    // console.log("e.target :>> ", e.target);
+    setHidden(false);
+    setScale(true);
+  };
+
+  const handleMouseOut = () => {
+    setHidden(true);
+    setScale(false);
+  };
   return (
     <div
       className="flex-1 px-[4px] min-w-[120px] cursor-pointer"
@@ -16,7 +30,9 @@ const NewStory = ({ handleMouseOver, handleMouseOut, isHidden }) => {
           <img
             src="https://bruce-fe-fb.web.app/image/avator.png"
             alt="friend"
-            className="object-cover w-full h-full duration-500 story-pic"
+            className={`object-cover w-full h-full duration-500 ${
+              isScale ? "scale-105" : ""
+            }`}
           />
         </div>
         {/* 第一層濾鏡遮罩 */}
