@@ -15,6 +15,9 @@ module.exports = {
         fb: "#2e89ff",
         "fb-point": "#32CD32",
       },
+      screens: {
+        laptop: "1140px",
+      },
     },
   },
   plugins: [],

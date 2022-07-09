@@ -5,7 +5,7 @@ const Information = () => {
   return (
     <div
       id="left-block"
-      className="hidden top-main-span max-w-[360px] w-full h-full pl-4 lg:block"
+      className="hidden top-main-span max-w-[360px] w-full h-full pl-4 laptop:block"
     >
       {infoArr.map((item, idx) => {
         return <InfoItem key={idx} name={item.name} imageUrl={item.imageUrl} />;
