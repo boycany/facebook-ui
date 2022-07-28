@@ -70,6 +70,34 @@ const users = [
     stories: [],
     posts: [],
   },
+  {
+    id: 9,
+    name: "Steve Jobs",
+    stories: [
+      {
+        content: "create new iPod",
+      },
+    ],
+    posts: [],
+  },
+  {
+    id: 10,
+    name: "David Fincher",
+    stories: [],
+    posts: [],
+  },
+  {
+    id: 11,
+    name: "Edward Yang",
+    stories: [],
+    posts: [],
+  },
+  {
+    id: 12,
+    name: "Morty",
+    stories: [],
+    posts: [],
+  },
 ];
 
 export default users;
