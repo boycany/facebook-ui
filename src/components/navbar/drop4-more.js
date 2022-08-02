@@ -3,7 +3,7 @@ const More = ({ handlePanel }) => {
     <div className="popover-panel hidden" id="more-panel" onClick={handlePanel}>
       <p className="text-white mb-3 text-2xl">Red Chien</p>
 
-      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-input cursor-pointer">
+      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-input cursor-pointer ">
         {/* 用 div 去把圖片裁切成圓形，記得同時下 rounded-full 和 overflow-hidden 才會將圖片超出圓形的部分隱藏起來 */}
         <div className="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
           {/* 使用 object fit: cover 的 css 屬性來調整圖片 */}
@@ -13,7 +13,7 @@ const More = ({ handlePanel }) => {
             alt="messenger avatar"
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 mr-2">
           <p className="text-white text-base mb-[1px]">Red Chien</p>
           <p className="text-gray-400 text-sm flex justify-between">
             查看你的個人檔案
