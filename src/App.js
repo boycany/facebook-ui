@@ -8,7 +8,7 @@ import Contact from "./components/right-block/contact";
 function App() {
   return (
     <div className="h-full bg-fb-bg">
-      <header className="w-screen h-[56px] fixed bg-fb-header top-0 left-0 right-0 flex justify-between px-4">
+      <header className="w-screen h-[56px] fixed bg-fb-header top-0 left-0 right-0 flex justify-between px-4 z-50">
         {/* Header Left */}
         <HeaderLeft />
         {/* Header Right */}

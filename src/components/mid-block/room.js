@@ -11,10 +11,10 @@ const Room = () => {
       <Swiper
         modules={[Navigation]}
         navigation
-        spaceBetween={30}
+        spaceBetween={0}
         slidesPerView={"auto"}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <button

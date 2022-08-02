@@ -12,10 +12,11 @@ const Stories = () => {
         {/* 限時動態 */}
         {users
           .filter((user) => user.stories.length > 0)
-          .map((user) => (
-            <Story username={user.name} key={user.id} />
-          ))}
+          .map((user) => {
+            return <Story username={user.name} key={user.id} />;
+          })}
       </div>
+
       {/* 限時動態滑動按鈕 */}
       <BtnRightArrow />
     </div>

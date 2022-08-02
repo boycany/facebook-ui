@@ -22,7 +22,7 @@ const Story = ({ username }) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden rounded-lg">
         {/* 做動畫效果的第二層濾鏡 */}
         <BlackFilter20 isHidden={isHidden} />
         {/* 圓形大頭照 */}

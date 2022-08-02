@@ -49,6 +49,10 @@
   top: 29px !important;
 }
 
+.swiper-button-next:active {
+  background-color: #323436;
+}
+
 .swiper-button-next::after {
   display: none;
 }
@@ -63,6 +67,10 @@
   width: 36px !important;
   height: 36px !important;
   top: 29px !important;
+}
+
+.swiper-button-pref:active {
+  background-color: #323436;
 }
 
 .swiper-button-prev::after {

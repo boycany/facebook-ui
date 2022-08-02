@@ -22,7 +22,7 @@ const NewStory = () => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <div className="h-full flex flex-col relative">
+      <div className="h-full flex flex-col relative rounded-lg overflow-hidden">
         {/* 做動畫效果的第二層濾鏡 */}
         <BlackFilter20 isHidden={isHidden} />
         {/* 大頭貼照 */}
