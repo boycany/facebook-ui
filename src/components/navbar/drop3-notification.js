@@ -19,7 +19,7 @@ const DropDownNotification = ({ isExpand }) => {
         </div>
         <div className="flex-1">
           <p className="text-white text-base mb-[1px]">
-            Red Chien 發佈了一則新貼文
+            Michael Jordan 發佈了一則新貼文
           </p>
           <p className="text-fb text-xs">• 1 分鐘前</p>
         </div>

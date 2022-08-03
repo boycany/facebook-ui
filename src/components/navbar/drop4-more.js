@@ -7,9 +7,9 @@ const More = ({ isExpand }) => {
     >
       <p className="text-white mb-3 text-2xl">Red Chien</p>
 
-      <div className="flex items-center justify-between">
+      <div className="lg:flex lg:items-center lg:flex-row flex-col">
         {/* 用 div 去把圖片裁切成圓形，記得同時下 rounded-full 和 overflow-hidden 才會將圖片超出圓形的部分隱藏起來 */}
-        <div className="hover:bg-fb-active cursor-pointer flex items-center rounded-lg p-2 mb-2 ">
+        <div className="hover:bg-fb-active cursor-pointer flex items-center rounded-lg p-2 mb-2">
           <div className="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
             {/* 使用 object fit: cover 的 css 屬性來調整圖片 */}
             <img
@@ -25,7 +25,7 @@ const More = ({ isExpand }) => {
             </p>
           </div>
         </div>
-        <div className="flex p-3 mb-2 items-center rounded-lg cursor-pointer hover:bg-fb-active">
+        <div className="flex p-3 mb-2 items-center rounded-lg cursor-pointer hover:bg-fb-active flex-1">
           <div className="bg-fb-input rounded-full p-2 mr-2 flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const More = ({ isExpand }) => {
               />
             </svg>
           </div>
-          <p className="flex-1 text-white">登出</p>
+          <p className="flex-1 text-white ml-3 lg:ml-1">登出</p>
         </div>
       </div>
     </div>

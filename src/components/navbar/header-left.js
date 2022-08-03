@@ -1,4 +1,10 @@
+import MenuIcon from "./menu-icon";
+import InfoDropPanel from "../left-block/infoDropPanel";
+import { useState } from "react";
+
 const HeaderLeft = () => {
+  const [expandPanel, setExpandPanel] = useState(false);
+
   return (
     <div className="flex items-center">
       {/* FB LOGO */}
@@ -20,6 +26,7 @@ const HeaderLeft = () => {
           d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"
         ></path>
       </svg>
+      {/* Search Bar */}
       <button className="popover-btn lg:hidden">
         <img src="https://bruce-fe-fb.web.app/image/search.svg" alt="search" />
       </button>
@@ -44,6 +51,8 @@ const HeaderLeft = () => {
           placeholder="搜尋 Facebook"
         />
       </div>
+      <MenuIcon expandPanel={expandPanel} setExpandPanel={setExpandPanel} />
+      {expandPanel && <InfoDropPanel />}
     </div>
   );
 };

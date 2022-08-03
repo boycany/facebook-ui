@@ -41,10 +41,10 @@ const DropDownMessenger = ({ isExpand }) => {
           />
         </div>
         <div className="flex-1">
-          <p className="text-white text-base mb-[1px]">Red Chien</p>
+          <p className="text-white text-base mb-[1px]">Bruce Lee</p>
           <p className="text-gray-400 text-sm flex justify-between">
             <span>Hello World~~!</span>
-            <span> • 1 分鐘前</span>
+            <span> • 3 分鐘前</span>
           </p>
         </div>
       </div>

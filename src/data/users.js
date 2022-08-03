@@ -23,7 +23,7 @@ const users = [
     posts: [
       {
         id: "MJ-01",
-        time: "5小時",
+        time: "1分鐘",
         content: "My cake.",
         link: {
           imgLink: "https://bruce-fe-fb.web.app/image/item.png",
@@ -36,7 +36,7 @@ const users = [
       },
       {
         id: "MJ-02",
-        time: "10小時",
+        time: "5小時",
         content: "I am Legend.",
         link: {
           imgLink:

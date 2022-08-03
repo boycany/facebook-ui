@@ -105,16 +105,16 @@ const HeaderRight = () => {
       >
         <img src="https://bruce-fe-fb.web.app/image/down.svg" alt="down" />
       </button>
-      {/* 下拉選單 1 - plus */}
+      {/* 下拉選單 Panel 1 - plus */}
       <DropDownPlus isExpand={expandPanel} />
 
-      {/* 下拉選單 2 - messenger */}
+      {/* 下拉選單 Panel 2 - messenger */}
       <DropDownMessenger isExpand={expandPanel} />
 
-      {/* 下拉選單 3 - notification */}
+      {/* 下拉選單 Panel 3 - notification */}
       <DropDownNotification isExpand={expandPanel} />
 
-      {/* 下拉選單 4 - more */}
+      {/* 下拉選單 Panel 4 - more */}
       <More isExpand={expandPanel} />
     </div>
   );
