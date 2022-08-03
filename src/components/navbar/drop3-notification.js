@@ -1,13 +1,13 @@
-const DropDownNotification = ({ handlePanel }) => {
+const DropDownNotification = ({ isExpand }) => {
   return (
     <div
-      className="popover-panel hidden"
+      className={`popover-panel ${isExpand.notif ? "" : "hidden"}`}
       id="notification-panel"
-      onClick={handlePanel}
+      onClick={(e) => e.stopPropagation()}
     >
       <p className="text-white mb-3 text-2xl">通知</p>
 
-      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-input cursor-pointer">
+      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-active cursor-pointer">
         {/* 用 div 去把圖片裁切成圓形，記得同時下 rounded-full 和 overflow-hidden 才會將圖片超出圓形的部分隱藏起來 */}
         <div className="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
           {/* 使用 object fit: cover 的 css 屬性來調整圖片 */}

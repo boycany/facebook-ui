@@ -1,6 +1,11 @@
-const DropDownMessenger = ({ handlePanel }) => {
+const DropDownMessenger = ({ isExpand }) => {
+  // console.log("isHidden :>> ", isHidden);
   return (
-    <div className="popover-panel hidden" id="msg-panel" onClick={handlePanel}>
+    <div
+      className={`popover-panel ${isExpand.msg ? "" : "hidden"}`}
+      id="msg-panel"
+      onClick={(e) => e.stopPropagation()}
+    >
       <p className="text-white mb-3 text-2xl">Messenger</p>
       <div className="bg-fb-input rounded-full py-1 px-3 flex items-center mb-4">
         {/* 這個實作 input 的技巧是用一個 div 來將 input 和 svg 包起來，然後將 input 的樣式都寫在 div 裡 */}
@@ -25,7 +30,7 @@ const DropDownMessenger = ({ handlePanel }) => {
           placeholder="搜尋 Messenger"
         />
       </div>
-      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-input cursor-pointer">
+      <div className="flex items-center mb-2 p-2 rounded-lg hover:bg-fb-active cursor-pointer">
         {/* 用 div 去把圖片裁切成圓形，記得同時下 rounded-full 和 overflow-hidden 才會將圖片超出圓形的部分隱藏起來 */}
         <div className="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
           {/* 使用 object fit: cover 的 css 屬性來調整圖片 */}

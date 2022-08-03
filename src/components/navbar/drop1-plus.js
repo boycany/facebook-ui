@@ -1,8 +1,13 @@
-const DropDownPlus = ({ handlePanel }) => {
+const DropDownPlus = ({ isExpand }) => {
+  // console.log("isExpand :>> ", isExpand);
   return (
-    <div className="popover-panel hidden" id="plus-panel" onClick={handlePanel}>
+    <div
+      className={`popover-panel ${isExpand.plus ? "" : "hidden"}`}
+      id="plus-panel"
+      onClick={(e) => e.stopPropagation()}
+    >
       <p className="text-white mb-3 text-2xl">建立</p>
-      <div className="flex items-center p-1 mb-2 hover:bg-fb-active rounded-lg cursor-pointer">
+      <div className="flex items-center p-2 mb-2 hover:bg-fb-active rounded-lg cursor-pointer">
         <div className="bg-fb-input rounded-full p-2 mr-2 flex justify-center items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
