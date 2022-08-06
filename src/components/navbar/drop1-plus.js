@@ -1,8 +1,8 @@
-const DropDownPlus = ({ isExpand }) => {
+const DropDownPlus = () => {
   // console.log("isExpand :>> ", isExpand);
   return (
     <div
-      className={`popover-panel ${isExpand.plus ? "" : "hidden"}`}
+      className={`popover-panel`}
       id="plus-panel"
       onClick={(e) => e.stopPropagation()}
     >

@@ -1,7 +1,7 @@
-const More = ({ isExpand }) => {
+const More = () => {
   return (
     <div
-      className={`popover-panel ${isExpand.more ? "" : "hidden"}`}
+      className={`popover-panel`}
       id="more-panel"
       onClick={(e) => e.stopPropagation()}
     >

@@ -1,7 +1,7 @@
-const DropDownNotification = ({ isExpand }) => {
+const DropDownNotification = () => {
   return (
     <div
-      className={`popover-panel ${isExpand.notif ? "" : "hidden"}`}
+      className={`popover-panel`}
       id="notification-panel"
       onClick={(e) => e.stopPropagation()}
     >

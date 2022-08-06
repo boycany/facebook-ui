@@ -1,8 +1,8 @@
-const DropDownMessenger = ({ isExpand }) => {
+const DropDownMessenger = () => {
   // console.log("isHidden :>> ", isHidden);
   return (
     <div
-      className={`popover-panel ${isExpand.msg ? "" : "hidden"}`}
+      className={`popover-panel`}
       id="msg-panel"
       onClick={(e) => e.stopPropagation()}
     >
