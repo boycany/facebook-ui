@@ -11,9 +11,11 @@ const NewPost = () => {
         </div>
         {/* input */}
         <div className="bg-fb-input rounded-full flex flex-1 items-center">
-          <p className="pl-3 text-gray-400 text-sm text-left">
-            Red，在想些什麼？
-          </p>
+          <input
+            type="text"
+            className="pl-3 text-white text-sm text-left focus:outline-none bg-transparent"
+            placeholder="Red，在想些什麼？"
+          />
         </div>
       </div>
       <div className="border-t border-gray-700 flex pt-3">
