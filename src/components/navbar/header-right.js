@@ -10,20 +10,21 @@ const HeaderRight = () => {
 
   const openPanel = (e, btnId) => {
     e.stopPropagation();
-    // console.log("btnId :>> ", btnId);
 
     setExpandPanel(btnId);
   };
 
   useEffect(() => {
-    const closePanel = () => setExpandPanel(null);
+    const closePanel = () => {
+      // console.log("close");
+      setExpandPanel(null);
+    };
 
     if (expandPanel) {
       window.addEventListener("click", closePanel);
-      return;
+    } else {
+      window.removeEventListener("click", closePanel);
     }
-
-    window.removeEventListener("click", closePanel);
 
     return () => window.removeEventListener("click", closePanel);
   }, [expandPanel, setExpandPanel]);
@@ -57,11 +58,12 @@ const HeaderRight = () => {
       </button>
       <button
         className="popover-btn"
-        id="bin-more"
-        onClick={(e) => openPanel(e, "bin-more")}
+        id="btn-more"
+        onClick={(e) => openPanel(e, "btn-more")}
       >
         <img src="https://bruce-fe-fb.web.app/image/down.svg" alt="down" />
       </button>
+
       {/* 下拉選單 Panel 1 - plus */}
       {expandPanel === "btn-plus" ? <DropDownPlus /> : null}
 
@@ -72,7 +74,7 @@ const HeaderRight = () => {
       {expandPanel === "btn-notif" ? <DropDownNotification /> : null}
 
       {/* 下拉選單 Panel 4 - more */}
-      {expandPanel === "bin-more" ? <More /> : null}
+      {expandPanel === "btn-more" ? <More /> : null}
     </div>
   );
 };
